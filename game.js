@@ -28,8 +28,16 @@ function checkResult(player, ai) {
     if (player === ai) {
         return 'remis'
     } else {
-        if ((player === "papier" && ai === "kamień") || (player === "kamień" && ai === "nożyczki") ||
-            player === "nożyczki" && ai === "papier") {
+        if ((player === "papier" && ai === "kamień") ||
+            (player === "papier" && ai === "spock") ||
+            (player === "kamień" && ai === "nożyczki") ||
+            (player === "kamień" && ai === "jaszczurka") ||
+            (player === "nożyczki" && ai === "jaszczurka") ||
+            (player === "nożyczki" && ai === "papier") ||
+            (player === "jaszczurka" && ai === "spock") ||
+            (player === "jaszczurka" && ai === "papier") ||
+            (player === "spock" && ai === "kamień") ||
+            (player === "spock" && ai === "nożyczki")) {
             return 'wygrana'
         } else {
             return 'przegrana'
